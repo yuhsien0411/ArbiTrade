@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-bg-primary text-text-primary font-sans;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 自定義滾動條 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-border-hover;
+  }
+}
+
+@layer components {
+  /* 買入按鈕 */
+  .btn-buy {
+    @apply bg-trade-buy hover:bg-trade-buyHover text-white font-medium px-4 py-2 rounded transition-colors;
+  }
+
+  /* 賣出按鈕 */
+  .btn-sell {
+    @apply bg-trade-sell hover:bg-trade-sellHover text-white font-medium px-4 py-2 rounded transition-colors;
+  }
+
+  /* 主按鈕 */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-bg-primary font-medium px-4 py-2 rounded transition-colors;
+  }
+
+  /* 次要按鈕 */
+  .btn-secondary {
+    @apply bg-bg-tertiary hover:bg-bg-hover text-text-primary font-medium px-4 py-2 rounded transition-colors;
+  }
+
+  /* 輸入框 */
+  .input-cex {
+    @apply bg-bg-tertiary border border-border rounded px-3 py-2 text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-border-hover transition-colors;
+  }
+
+  /* 選擇框 */
+  .select-cex {
+    @apply bg-bg-tertiary border border-border rounded px-3 py-2 text-text-primary focus:outline-none focus:border-border-hover transition-colors;
+  }
+
+  /* 卡片 */
+  .card-cex {
+    @apply bg-bg-secondary border border-border rounded-lg;
+  }
+
+  /* 表格行 */
+  .table-row-cex {
+    @apply hover:bg-bg-hover transition-colors cursor-pointer;
+  }
+
+  /* Tab 按鈕 */
+  .tab-cex {
+    @apply px-4 py-2 text-text-secondary hover:text-text-primary transition-colors cursor-pointer border-b-2 border-transparent;
+  }
+
+  .tab-cex.active {
+    @apply text-text-primary border-primary;
+  }
+
+  /* 數字（等寬字體） */
+  .number-cex {
+    @apply font-mono;
+  }
+
+  /* 買入價格 */
+  .price-buy {
+    @apply text-trade-buy number-cex;
+  }
+
+  /* 賣出價格 */
+  .price-sell {
+    @apply text-trade-sell number-cex;
+  }
+
+  /* 正數 */
+  .number-positive {
+    @apply text-trade-buy number-cex;
+  }
+
+  /* 負數 */
+  .number-negative {
+    @apply text-trade-sell number-cex;
+  }
+}
+
