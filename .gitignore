@@ -1,0 +1,99 @@
+node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+.env.backup
+.venv
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+server/logs/*
+
+# Build outputs
+dist
+build
+client/build
+coverage
+coverage/**
+.nyc_output
+
+# Caches and temporary files
+.cache
+.parcel-cache
+.tmp
+.temp
+
+# Framework outputs
+.next
+out
+
+# TypeScript
+*.tsbuildinfo
+
+# Editors/OS
+.DS_Store
+Thumbs.db
+.idea
+.vscode/
+
+# Misc
+*.tgz
+*.swp
+*.swo
+*.pid
+*.pid.lock
+*.seed
+
+# Cursor rules (workspace-specific)
+*.cursorrules
+.cursor/rules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+docs/
+tests/
+test/
+
+test.py
+*.perm
+arbe.code-workspace
+
+AGENTS.md
+
+# Data files - 避免上傳敏感數據文件
+data/net_value/net_value_*.jsonl
+data/arbitrage/executions_*.jsonl
+data/twap/executions_*.jsonl
+
+# Runtime account data, strategy state, and backups (at any depth)
+**/data/
+*.bak
+*.backup
+
+# Local credentials and key material
+.aws/
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+credentials.json
